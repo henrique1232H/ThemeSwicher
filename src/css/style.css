@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 1s ease-in;
+}
+
+main {
+    display: flex;
+    background: rgb(0,0,0);
+    width: min(23.6rem, 100%);
+    height: 10.2rem;
+    margin: 0 auto;
+    border-radius: 59px;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    box-shadow: 10px 10px 40px 5px rgba(0,0,0,0.5);
+    position: relative;
+    
+}
+
+
+main > button {
+    height: auto;
+    width: 35%;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.circle {
+    position: absolute;
+    height: 8.7rem;
+    width: 8.7rem;
+    border-radius: 60px;
+    background: #fff;
+    left: 1rem;
+}
+
+img {
+    height: 13vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.DarkTheme {
+    transition: background 1s ease-in;
+    background: #292C35;
+}
+
+
+.moveCircleSun {
+    animation: moveCircleToSun 1s ease-in forwards;
+}
+
+.moveCircleMoon {
+    animation: moveCircleToMoon 1s ease-in forwards;
+}
+
+
+.opacity {    
+    animation: opacity 1s ease-in forwards;
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes moveCircleToMoon {
+    0% {
+        transform: translateX(calc(4.5rem + 100%));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveCircleToSun {
+    0% {
+        transform: translateX(0);
+    }
+
+
+    100% {
+        transform: translateX(calc(100% + 4.5rem));
+    }
+
+}
