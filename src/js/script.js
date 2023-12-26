@@ -7,7 +7,7 @@ const body = document.querySelector("body");
 const handleClick = () => {
     buttonSun.onclick = () => {
         buttonSun.classList.add("opacity");
-        buttonMoon.classList.remove("opacity")
+        buttonMoon.classList.remove("opacity");
 
 
         body.classList.add("DarkTheme");
